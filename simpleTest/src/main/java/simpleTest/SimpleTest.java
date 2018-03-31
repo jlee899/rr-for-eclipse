@@ -15,7 +15,8 @@ public class SimpleTest {
 	private void paralleSteam() {
 
 		Arrays.asList("a1", "a2", "b1", "c2", "c1").stream().filter(s-> {
-			return s.length()>1;}).forEach(s->System.out.println(s));	// plus sorted
+			return s.length()>1;}).forEach(s->System.out.println(s));	
+		
 		Arrays.asList("a1", "a2", "b1", "c2", "c1").parallelStream().filter(s -> {
 			System.out.format("filter: %s [%s]\n", s, Thread.currentThread().getName());
 			return true;
